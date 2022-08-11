@@ -64,7 +64,8 @@ class Root(Interface):
         # basename of "mopidy.desktop", some MPRIS clients will start a new
         # Mopidy instance in a terminal window if one clicks outside the
         # buttons of the UI. This is probably never what the user wants.
-        return ""
+        # EDIT : Required for Mopidy to appear in the Ubuntu sound menu (legacy).
+        return "mopidy.desktop"
 
     @property
     def SupportedUriSchemes(self):
